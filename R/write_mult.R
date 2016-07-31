@@ -6,28 +6,21 @@
 #' @param type the type of file to be made (csv, txt).
 #' @return The created files saved to current working directory.
 #' @examples
-#' write_mult(iris, txt)
+#' write_mult(iris, )
 #' write_mult(iris)
 #' @export
 
-write_mult <- function(x, type = "csv") {
+write_mult <- function(x,y,z) {
   i <- 1
-  if (type == "csv") {
-    while (i <= length(x)) {
-      path <- paste(colnames(x)[i], "csv", sep = ".")
-      write_csv(x[i], path)
-      i <- i + 1
-    }
+  while (i <= length(y))
+  {
+    extract <- y[[i]]
+    path <- paste(z[i],"csv",sep = ".")
+    write_csv(x[extract],path,delim=",")
+    i <- i + 1
   }
-  else if (type == "txt") {
-    while (i <= length(x)) {
-      path <- paste(colnames(x)[i], "txt", sep = ".")
-      write_csv(x[i], path)
-      i <- i + 1
-    }
-  }
-  else {"file type is not currently supported, try 'csv' or 'txt'"}
 }
+
 
 # # Test function with iris
 # write_mult(iris)
