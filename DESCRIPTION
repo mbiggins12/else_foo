@@ -1,9 +1,13 @@
-Package: elseFoo
+Package: write_tools
 Type: Package
-Title: What the Package Does (Title Case)
+Title: write_tools
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: Who to complain to <yourfault@somewhere.net>
-Description: More about what it does (maybe more than one line)
-License: What license is it under?
+Authors@R: person("matthew", "biggins", email = "mbiggins@alumni.nd.edu", role = c("aut", "cre"))
+Description: Write multiple files from one table using column name as new file name.
+License: GPL-3
 LazyData: TRUE
+Imports:
+    readr
+Suggests:
+    testthat
+RoxygenNote: 5.0.1
