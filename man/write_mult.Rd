@@ -4,12 +4,12 @@
 \alias{write_mult}
 \title{Write multiple files from one table using column name as new file name.}
 \usage{
-write_mult(x, type = "csv")
+write_mult(x, y, z)
 }
 \arguments{
 \item{x}{table of data with column headers.}
 
-\item{type}{the type of file to be made (csv, txt).}
+\item{type}{the type of file to be made (data,head column ids, column names).}
 }
 \value{
 The created files saved to current working directory.
@@ -18,7 +18,6 @@ The created files saved to current working directory.
 Write multiple files from one table using column name as new file name.
 }
 \examples{
-write_mult(iris, txt)
-write_mult(iris)
+write_mult(iris,list(c(1,2),c(3,4),5),c("Sepal","Petal","Species"))
 }
 

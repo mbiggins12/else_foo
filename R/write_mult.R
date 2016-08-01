@@ -3,11 +3,10 @@
 #' Write multiple files from one table using column name as new file name.
 #'
 #' @param x table of data with column headers.
-#' @param type the type of file to be made (csv, txt).
+#' @param type the type of file to be made (data,head column ids, column names).
 #' @return The created files saved to current working directory.
 #' @examples
-#' write_mult(iris, )
-#' write_mult(iris)
+#' write_mult(iris,list(c(1,2),c(3,4),5),c("Sepal","Petal","Species"))
 #' @export
 
 write_mult <- function(x,y,z) {
@@ -16,7 +15,7 @@ write_mult <- function(x,y,z) {
   {
     extract <- y[[i]]
     path <- paste(z[i],"csv",sep = ".")
-    write_csv(x[extract],path,delim=",")
+    write_csv(x[extract],path)
     i <- i + 1
   }
 }

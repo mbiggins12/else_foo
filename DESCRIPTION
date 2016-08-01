@@ -1,6 +1,6 @@
-Package: write_tools
+Package: write_mult
 Type: Package
-Title: write_tools
+Title: write_mult
 Version: 0.1.0
 Authors@R: person("matthew", "biggins", email = "mbiggins@alumni.nd.edu", role = c("aut", "cre"))
 Description: Write multiple files from one table using column name as new file name.
