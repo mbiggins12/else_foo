@@ -4,6 +4,7 @@
 #'
 #' @param x table of data with column headers.
 #' @param type the type of file to be made (data,head column ids, column names).
+#' @import readr
 #' @return The created files saved to current working directory.
 #' @examples
 #' write_mult(iris,list(c(1,2),c(3,4),5),c("Sepal","Petal","Species"))
