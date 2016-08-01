@@ -3,7 +3,9 @@
 #' Write multiple files from one table using column name as new file name.
 #'
 #' @param x table of data with column headers.
-#' @param type the type of file to be made (data,head column ids, column names).
+#' @param y is list of the columns ids to be in each csv
+#' @param z is the name of each respective csv
+#' @param (data,head column ids, column names).
 #' @import readr
 #' @return The created files saved to current working directory.
 #' @examples
@@ -15,6 +17,7 @@ write_mult <- function(x,y,z) {
   if (length(y)!=length(z)) stop("Enter a name for each csv", call. = F)
   if(class(x) != "data.frame") stop("Please add a data frame", call. = F)
   if(class(y)!="list") stop("Please add a list for the columns", call. = F)
+  if(class(z)!="character") stop("Please enter a name for the csv in character", call. = F)
   while (i <= length(y))
   {
     extract <- y[[i]]
