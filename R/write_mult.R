@@ -11,6 +11,7 @@
 
 write_mult <- function(x,y,z) {
   i <- 1
+  if (length(y)!=length(x)) stop("Enter a name for each csv", call. = FALSE)
   while (i <= length(y))
   {
     extract <- y[[i]]

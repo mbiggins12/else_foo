@@ -12,3 +12,4 @@ test_that("column_extract", {
   sepal <- read_csv("Sepal_Width.csv")
   expect_equal(sepal[,1],iris$Sepal.Width)
 })
+
