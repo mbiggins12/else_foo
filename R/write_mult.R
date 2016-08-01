@@ -12,11 +12,13 @@
 
 write_mult <- function(x,y,z) {
   i <- 1
-  if (length(y)!=length(z)) stop("Enter a name for each csv", call. = FALSE)
-  if(class(x) != "data.frame") stop("Please add a data frame", .call = F)
+  if (length(y)!=length(z)) stop("Enter a name for each csv", call. = F)
+  if(class(x) != "data.frame") stop("Please add a data frame", call. = F)
+  if(class(y)!="list") stop("Please add a list for the columns", call. = F)
   while (i <= length(y))
   {
     extract <- y[[i]]
+    if(class(extract)!="numeric") stop("Enter a number for column id", call. = F)
     path <- paste(z[i],"csv",sep = ".")
     write_csv(x[extract],path)
     i <- i + 1

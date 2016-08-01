@@ -1,4 +1,4 @@
 library(testthat)
-library(elseFoo)
+library(writemult)
 
-test_check("elseFoo")
+test_check("writemult")
