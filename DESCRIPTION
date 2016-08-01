@@ -3,7 +3,7 @@ Type: Package
 Title: writemult
 Version: 0.1.0
 Authors@R: person("matthew", "biggins", email = "mbiggins@alumni.nd.edu", role = c("aut", "cre"))
-Description: Write multiple files from one table using column name as new file name.
+Description: Write multiple files from one table using column id and names to create a new file.
 License: GPL-3
 LazyData: TRUE
 Imports:
